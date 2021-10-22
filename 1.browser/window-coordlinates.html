@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            background-color: beige;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+
+        .special {
+            background-color: lightsalmon;
+        }
+
+        .header {
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="header">
+        <button class="move100">100px씩 이동</button>
+        <button class="moveTo100">100px로 이동</button>
+        <button class="moveToSpecial">스페셜로 이동</button>
+    </span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <script>
+        const special = document.querySelector('.special');
+        special.addEventListener('click', (event) => {
+            const rect = special.getBoundingClientRect();
+            console.log(rect);
+            // 사용자가 보는 화면기준
+            console.log(`client : ${event.clientX} , ${event.clientY}`);
+            // 웹 브라우저 페이지 기준
+            console.log(`page : ${event.pageX} , ${event.pageY}`);
+        });
+        const move100 = document.querySelector('.move100');
+        const moveTo100 = document.querySelector('.moveTo100');
+        const moveToSpecial = document.querySelector('.moveToSpecial');
+
+        move100.addEventListener('click', (event) => {
+            window.scrollBy({ top: 100, left: 0, behavior: 'smooth' });
+        });
+        moveTo100.addEventListener('click', (event) => {
+            window.scrollTo(0, 100)
+        });
+        moveToSpecial.addEventListener('click', (event) => {
+            // dom 으로 짚은 엘리먼트 상위로 이동
+            special.scrollIntoView(true);
+        });
+    </script>
+</body>
+
+</html>

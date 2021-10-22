@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="padding: 10px;">
+        <div>
+            window.screen :
+            <span id="screen"></span>
+        </div>
+        <div>
+            window.outer :
+            <span id="outer"></span>
+        </div>
+        <div>
+            window.inner :
+            <span id="inner"></span>
+        </div>
+        <div>
+            documentElement.clientWidth :
+            <span id="document"></span>
+        </div>
+    </div>
+</body>
+<script>
+    let screen = document.getElementById('screen')
+    let outer = document.getElementById('outer')
+    let inner = document.getElementById('inner')
+    // window.onresize = function () {
+    //     let screen = `${window.screen.width} , ${window.screen.height}`;
+    //     let outer = `${window.outerWidth} , ${window.outerHeight}`;
+    //     let inner = `${window.innerWidth} , ${window.innerHeight}`;
+    //     document.getElementById('screen').innerText = screen;
+    //     document.getElementById('outer').innerText = outer;
+    //     document.getElementById('inner').innerText = inner;
+    // }
+    function updateTag() {
+        let _screen = `${window.screen.width} , ${window.screen.height}`;
+        let _outer = `${window.outerWidth} , ${window.outerHeight}`;
+        let _inner = `${window.innerWidth} , ${window.innerHeight}`;
+        // let document = `${document.element.clientWidth} , ${document.element.clientWidth}`;
+        screen.innerText = _screen;
+        outer.innerText = _outer;
+        inner.innerText = _inner;
+        //document.getElementById('document').innerText = document;
+    }
+    window.addEventListener('resize', () => {
+        updateTag()
+    }
+    )
+    updateTag()
+</script>
+
+</html>
