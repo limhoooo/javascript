@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 첫번째로 호출됨  -->
+    <script src="test.js" defer></script>
+</head>
+
+<body>
+
+    <script>
+        // 두번째로 호출됨
+        // HTML 이 다 그려지면 호출
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded');
+        })
+        // 세번째로 호출됨
+        // css font images 등 리소스 다 불러온다음에 호출
+        window.addEventListener('load', () => {
+            console.log('load');
+        })
+        // 첫번째
+        // 페이지 떠날때 호출
+        window.addEventListener('beforeunload', () => {
+            console.log('beforeunload');
+        })
+        // 두번째
+        // 페이지 리소스 다 없애고 호출
+        window.addEventListener('unload', () => {
+            console.log('unload');
+        })
+
+    </script>
+</body>
+
+</html>
