@@ -3,7 +3,6 @@ const horozontal = document.querySelector('.horozontal');
 const target = document.querySelector('.target');
 const tag = document.querySelector('.tag');
 
-
 window.addEventListener('load', () => {
 
     const targetRect = target.getBoundingClientRect();
