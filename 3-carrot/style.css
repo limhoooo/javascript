@@ -5,6 +5,7 @@ button {
 }
 body {
     text-align: center;
+    background-color: black;
 }
 .game {
     display: flex;
@@ -86,4 +87,12 @@ body {
 .pop-up_message {
     display: block;
     font-size: 38px;
+}
+.carrot, .bug{
+    cursor: pointer;
+    transition: transform 100ms ease-in;
+}
+.carrot:hover,
+.bug:hover {
+    transform: scale(1.1);
 }
