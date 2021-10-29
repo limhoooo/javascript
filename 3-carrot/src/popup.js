@@ -10,6 +10,7 @@ export default class Popup {
             this.hide();
         })
     }
+    // 클릭했을때 어떤 이벤트를 전달할건지 정해주는 함수
     setClickListener(onClick) {
         this.onClick = onClick;
     }

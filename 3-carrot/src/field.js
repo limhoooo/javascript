@@ -5,8 +5,6 @@ const CARROT_SIZE = 80;
 
 export default class Field {
     constructor(carrotCount, bugCount) {
-        console.log('carrotCount');
-        console.log(bugCount);
         this.carrotCount = carrotCount;
         this.bugCount = bugCount;
         this.field = document.querySelector('.game_field');
