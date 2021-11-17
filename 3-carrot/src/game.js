@@ -101,6 +101,7 @@ class Game {
         this.gameTimer.style.visibility = 'visible';
         this.gameScore.style.visibility = 'visible';
     }
+
     startGameTimer() {
         let remainingTimeSec = this.gameDuration;
         this.updateTimerText(remainingTimeSec);
@@ -113,6 +114,7 @@ class Game {
             this.updateTimerText(--remainingTimeSec)
         }, 1000)
     }
+
 
     stopGameTimer() {
         clearInterval(this.timer);
