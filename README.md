@@ -7,5 +7,5 @@ javascript(ES6) , html , css
 ## 좌표찾기
 https://limhoooo-game-coordinates.netlify.app
 
-## 토끼잡기 게임
+## 당근잡기 게임
 https://limhoooo-game-carrot.netlify.app/
